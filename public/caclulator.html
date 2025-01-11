@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caclulator Project</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./output.css">
+    <link rel="stylesheet" href="../src/custom.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"integrity="sha512-f8mwTB+Bs8a5c46DEm7HQLcJuHMBaH/UFlcgyetMqqkvTcYg4g5VXsYR71b3qC82lZytjNYvBj2pf0VekA9/FQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Swipper Slider -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <!-- /* Font Awsome Cdn */ -->
+    <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro-v6@44659d9/css/all.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="../src/js/bundle.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<body style="font-family: poppins;" class="bg-[#000036;]">
+<!-- Navbar -->
+
+<nav class="px-4 navbar z-50  sm:px-4 lg:px-36 py-6 rounded fixed top-0 w-full">
+  <div class="container flex flex-wrap items-center justify-between mx-auto">
+    <a href="https://flowbite.com/" class="flex  items-center">
+<div class="border-r-4 border-[#7562E0] title overflow-hidden "><span class="text-[#7562E0] text-3xl  font-semibold">Moazzam Ali</span>
+</div>
+</a>
+    </a>
+    <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden  focus:outline-none focus:ring-2 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+      <span class="sr-only">Open main menu</span>
+      <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+    </button>
+    <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+      <ul class="flex bg-[#000036] md:bg-transparent rounded-xl border border-[#7562E0] flex-col p-4 mt-4  md:rounded-lg md:flex-row md:space-x-14 md:mt-0 md:text-sm md:font-medium md:border-0  dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+        <li class="nav-child">
+          <a href="./index.html" class="block py-2 pl-3 pr-4 text-[white] hover:bg-black hover:text-gray-400 font-medium rounded md:bg-transparent  md:p-0 text-sm" aria-current="page">Home</a>
+        </li>
+        <li class="nav-child">
+          <a href="#about-me" class="block py-2 pl-3 pr-4 text-[#7562E0] hover:bg-black hover:text-gray-400 font-medium rounded md:bg-transparent  md:p-0 text-sm" aria-current="page">About me</a>
+        </li>
+        <li class="nav-child">
+          <a href="#project-grid" class="block py-2 pl-3 pr-4 text-[#7562E0] hover:bg-black hover:text-gray-400 font-medium rounded md:bg-transparent  md:p-0 text-sm" aria-current="page">Projects</a>
+        </li>
+        <li class="nav-child">
+          <a href="tel:+923224066958" class="block py-2 pl-3 pr-4 hover:bg-black text-[#7562E0] hover:text-gray-400 font-medium rounded md:bg-transparent  md:p-0 text-sm" aria-current="page">Contact</a> 
+      </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!--Navbar  -->
+ <div style="transform: translate(-50%,-50%);" class="container calculator  font-[300]  absolute top-[50%] w-fit left-[50%] ">
+  <h1 id="heading-2" class=" mb-10 t font-medium text-[#7562E0] text-center text-3xl">Calculator Project</h1>
+<div class="bg-transparetn border border-[#7562E0]" >
+  <input type="text " class="input bg-transparent text-white border-0 a p-3 w-fit">
+  <input type="text" class="w-fit bg-transparent text-white md:text-end border-0 p-3 pr-2 pl-2 font-normals input-2"> 
+</div>
+  <div class="row flex gap-[1px] justify-between">
+    <button  class="button bg-[transparent] text-white text-xl py-3  w-4/12 border border-[#7562E0]"class="">9</button>
+    <button  class="button bg-[transparent] text-white text-xl  w-4/12 border border-[#7562E0]"class="">8</button>
+    <button  class="button bg-[transparent] text-white text-xl  w-4/12 border border-[#7562E0]"class="">7</button>
+  </div>
+  <div class="row flex justify-between gap-[1px]">
+    <button  class="button bg-[transparent] text-white text-xl py-3  w-4/12 border border-[#7562E0]"class="">6</button>
+    <button  class="button bg-[transparent] text-white text-xl  w-4/12 border border-[#7562E0]"class="">5</button>
+    <button  class="button bg-[transparent] text-white text-xl  w-4/12 border border-[#7562E0]"class="">4</button>
+  </div>
+  <div class="row flex justify-between gap-[1px]">
+    <button  class="button bg-[transparent] text-white text-xl py-3  w-4/12 border border-[#7562E0]"class="">3</button>
+    <button  class="button bg-[transparent] text-white text-xl \ w-4/12 border border-[#7562E0]"class="">2</button>
+    <button  class="button bg-[transparent] text-white text-xl  w-4/12 border border-[#7562E0]"class="">1</button>
+  </div>
+  <div class="row flex justify-between gap-[1px]">
+    <button  class="button bg-[transparent] text-white text-xl py-3  w-4/12 border border-[#7562E0]">-</button>
+    <button  class="button bg-[transparent] text-white text-xl  w-4/12 border border-[#7562E0]"class="">+</button>
+    <button  class="button bg-[transparent] text-white text-xl  w-4/12 border border-[#7562E0]"class="">C</button>
+  </div>
+  <div class="row flex justify-between gap-[1px]">
+    <button  class="button bg-[transparent] text-white text-xl py-3 w-4/12 border border-[#7562E0]"class="">X</button>
+    <button  class="button bg-[transparent] text-white text-xl w-4/12 border border-[#7562E0]"class="">/</button>
+    <button  class="button bg-black text-white text-xl w-4/12 border border-[#7562E0]"class="">=</button>
+  </div>
+  <script src="https://unpkg.com/flowbite@1.5.2/dist/flowbite.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js" integrity="sha512-8Wy4KH0O+AuzjMm1w5QfZ5j5/y8Q/kcUktK9mPUVaUoBvh3QPUZB822W/vy7ULqri3yR8daH3F58+Y8Z08qzeg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
+ <script>
+    let string = ""
+    let input = document.querySelector(".input")
+    let input2 = document.querySelector(".input-2")
+    let text = document.querySelector(".p")
+    let buttons = document.querySelectorAll(".button")
+Array.from(buttons).forEach((button)=>{
+  button.addEventListener("click",function(e){
+if(e.target.innerHTML == "="){
+string = eval(string)
+input2.value = string
+}
+else if(e.target.innerHTML == "C"){
+  string = ""
+  input.value =""
+  input2.value =""
+}
+else if(e.target.innerHTML == "X"){ 
+  string = string + "*"
+  input.value = string
+}
+else if(e.target.innerHTML == "del"){
+string = string.length
+input.value = string
+}
+else{
+  string = string + e.target.innerHTML
+input.value = string
+}
+  })
+})
+ </script>
+    <script src="../src/js/app.js"></script>
+
+</body>
+</html>
